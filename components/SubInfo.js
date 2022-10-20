@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { SIZES } from "../constants";
 
 export const NFTTitle = () => {
   return (
@@ -40,7 +41,13 @@ export const EndDate = () => {
 };
 export const SubIfo = () => {
   return (
-    <View>
+    <View style={{
+      width: '100%',
+      paddingHorizontal: SIZES.font,
+      marginTop: - SIZES.extraLarge,
+      flexDirection: "row",
+      justifyContent: "space-between"
+    }}>
       <Text>SubIfo</Text>
     </View>
   );
