@@ -27,10 +27,23 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
   );
 };
 
-export const EthPrice = ({price}) => {
+export const EthPrice = ({ price }) => {
   return (
-    <View>
-      <Text>{price}</Text>
+    <View style={{ flexDirection: "row" }}>
+      <Image
+        source={assets.eth}
+        resizeMode="contain"
+        style={{ width: 20, height: 20, marginRight: 2 }}
+      />
+      <Text
+        style={{
+          fontFamily: FONTS.medium,
+          fonstSize: SIZES.medium,
+          color: COLORS.primary,
+        }}
+      >
+        {price}
+      </Text>
     </View>
   );
 };

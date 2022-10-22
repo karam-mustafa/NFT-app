@@ -18,7 +18,6 @@ export const Home = () => {
             ListHeaderComponent={<HomeHeader />}
           ></FlatList>
         </View>
-
         <View
           style={{
             position: "absolute",
