@@ -69,7 +69,7 @@ const DetailsDesc = ({ data }) => {
   );
 };
 
-const DetailHeader = ({ data, nav }) => (
+const DetailHeader = ({ data, navigation }) => (
   <View style={{ width: "100%", height: 373 }}>
     <Image
       source={data.image}
@@ -79,7 +79,7 @@ const DetailHeader = ({ data, nav }) => (
 
     <CircleButton
       imgUrl={assets.left}
-      handlePress={() => nav.goBack()}
+      handlePress={() => navigation.goBack()}
       left={15}
       top={StatusBar.currentHeight + 10}
     />
@@ -128,6 +128,17 @@ const Details = ({ route, navigation }) => {
             <SubIfo />
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
+              {data.bids.length > 0 && (
+                <Text
+                  style={{
+                    fontSize: SIZES.font,
+                    fontFamily: FONTS.semiBold,
+                    color: COLORS.primary,
+                  }}
+                >
+                  Current Bid
+                </Text>
+              )}
             </View>
           </React.Fragment>
         )}
