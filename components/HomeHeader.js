@@ -2,7 +2,7 @@ import { View, Image, Text } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { assets, COLORS, FONTS, SIZES } from "../constants";
 
-const HomeHeader = () => {
+const HomeHeader = ({onSearch}) => {
   return (
     <View
       style={{
@@ -89,7 +89,7 @@ const HomeHeader = () => {
           <TextInput
             placeholder="Search NFTs"
             style={{ flex: 1 }}
-            onChangeText={() => {}}
+            onChangeText={onSearch}
           />
         </View>
       </View>
